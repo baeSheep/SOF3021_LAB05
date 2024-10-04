@@ -1,5 +1,6 @@
 <%@ page pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,7 @@
                     <td>${item.id}</td>
                     <td>${item.name}</td>
                     <td>${item.price}</td>
-                    <td>${item.createDate}</td>
+                    <td><fmt:formatDate value="${item.createDate}" pattern="dd/MM/yyyy" /></td>
                 </tr>
             </c:forEach>
         </tbody>

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,6 +32,7 @@ public class Product implements Serializable {
     
     @Temporal(TemporalType.DATE)
     @Column(name = "Createdate")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     Date createDate = new Date();
     Boolean available;
 
